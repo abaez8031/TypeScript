@@ -1,9 +1,16 @@
-let username = "Dave";
-console.log(username);
+let myName: string = "Dave";
+let meaningOfLife: number;
+let isLoading: boolean;
+let album: any;
 
-let a: number = 12;
-let b: number = 6;
-let c: number = 2;
+myName = "John";
+meaningOfLife = 42;
+isLoading = true;
+album = "Van Halen";
+album = 1984;
+album = true;
 
-console.log(a / b);
-console.log(c * b)
+
+const sum = (a: number, b: number) => {
+  return a + b;
+}
