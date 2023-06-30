@@ -1,19 +1,13 @@
-// let myName: string = "Dave";
-// let meaningOfLife: number;
-// let isLoading: boolean;
-// let album: any
+//
+let stringArr = ["one", "hey", "Dave"];
 
-// myName = "John";
-// meaningOfLife = 42;
-// isLoading = true;
-// album = "Van Halen";
-// album = 5150;
+let guitars = ["Strat", "Les Paul", 5150];
 
+let mixedData = ["EVH", 1984, true];
 
-// const sum = (a: number, b: number) => {
-//   return a + b;
-// }
+stringArr[0] = "John";
+stringArr.push("hey");
 
-// let postId: string | number;
-// let isActive: number | boolean;
-
+guitars[0] = 1984;
+// guitars.unshift(true); // NOT ALLOWED
+guitars.unshift("Jim");
