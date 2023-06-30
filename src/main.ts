@@ -15,3 +15,4 @@ const sum = (a: number, b: number) => {
 }
 
 let postId: string | number;
+let isActive: number | boolean;
