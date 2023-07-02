@@ -10,4 +10,4 @@ stringArr.push("hey");
 
 guitars[0] = 1984;
 // guitars.unshift(true); // NOT ALLOWED
-// guitars.unshift("Jim");
+guitars.unshift("Jim");
