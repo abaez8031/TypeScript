@@ -47,3 +47,7 @@ let evh: Guitarist = {
   active: false,
   albums: [1984,5150, "OU812"]
 }
+
+const greetGuitarist = (guitarist: Guitarist) => {
+  return `Hello ${guitarist.name}`
+}
