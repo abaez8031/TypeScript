@@ -28,3 +28,10 @@ myObj = [];
 console.log(typeof myObj)
 myObj = bands;
 myObj = {};
+
+const exampleObj = {
+  prop1: "Dave",
+  prop2: true
+}
+
+// exampleObj.prop2 = 42 NOT ALLOWED
