@@ -36,7 +36,7 @@ const exampleObj = {
 
 // exampleObj.prop2 = 42 NOT ALLOWED
 
-type Guitarist = {
+interface Guitarist {
   name: string,
   active?: boolean,
   albums: (string | number)[]
