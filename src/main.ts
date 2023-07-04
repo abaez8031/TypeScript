@@ -23,3 +23,8 @@ let mixed = ["John", 1, false]
 // myTuple[3] = 42 NOT ALLOWED
 
 //Objects
+let myObj: object;
+myObj = [];
+console.log(typeof myObj)
+myObj = bands;
+myObj = {};
