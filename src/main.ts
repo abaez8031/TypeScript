@@ -13,3 +13,6 @@ guitars[0] = 1984;
 guitars.unshift("Jim");
 
 let test = [];
+let bands: string[] = [];
+bands.push("Van Halen")
+// bands.push(true) NOT ALLOWED
