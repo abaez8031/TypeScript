@@ -35,3 +35,15 @@ const exampleObj = {
 }
 
 // exampleObj.prop2 = 42 NOT ALLOWED
+
+type Guitarist = {
+  name: string,
+  active: boolean,
+  albums: (string | number)[]
+}
+
+let evh: Guitarist = {
+  name: "Eddie",
+  active: false,
+  albums: [1984,5150, "OU812"]
+}
