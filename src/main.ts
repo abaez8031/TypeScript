@@ -16,3 +16,10 @@ let test = [];
 let bands: string[] = [];
 bands.push("Van Halen")
 // bands.push(true) NOT ALLOWED
+
+// Tuple
+let myTuple: [string,number,boolean] = ["Dave", 42,true];
+let mixed = ["John", 1, false]
+// myTuple[3] = 42 NOT ALLOWED
+
+//Objects
