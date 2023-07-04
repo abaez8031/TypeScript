@@ -38,7 +38,7 @@ const exampleObj = {
 
 type Guitarist = {
   name: string,
-  active: boolean,
+  active?: boolean,
   albums: (string | number)[]
 }
 
@@ -48,6 +48,13 @@ let evh: Guitarist = {
   albums: [1984,5150, "OU812"]
 }
 
+let jp: Guitarist = {
+  name: "Jimmy",
+  albums: ["I", "II", "IV"]
+}
+
 const greetGuitarist = (guitarist: Guitarist) => {
   return `Hello ${guitarist.name}`
 }
+
+console.log(greetGuitarist(jp))
