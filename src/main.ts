@@ -128,6 +128,7 @@ const sumAll = (a: number = 10, b: number, c: number = 2): number => {
 
 logMsg(addAll(2,3,2))
 logMsg(addAll(2,3))
+logMsg(sumAll(2,3))
 logMsg(sumAll(undefined,3))
 
 // Rest Parameters
@@ -136,3 +137,28 @@ const total = (...nums: number[]): number => {
 }
 
 logMsg(total(1,2,3,4))
+
+const createError = (errorMsg: string): never => {
+  throw new Error (errorMsg)
+}
+
+const infinite = () => {
+  let i: number = 1;
+  while (true) {
+    i++
+    if(i > 100) break
+  }
+}
+
+// custom typeguard
+const isNumber = (value: any): boolean => {
+  return typeof value === "number" ? true : false
+}
+
+// use of the never type
+const numberOrString = (value: number | string): string => {
+  if (typeof value === "number") return "number"
+  if (typeof value === "string") return "string"
+  return createError("This should never happen!")
+}
+
