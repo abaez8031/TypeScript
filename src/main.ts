@@ -58,3 +58,12 @@ const greetGuitarist = (guitarist: Guitarist) => {
 }
 
 console.log(greetGuitarist(jp))
+
+//Enums
+// Unlike most TS features, enums are not a type-level addition to JS but something added to the language and runtime.
+
+enum Grade {
+  U = 1,D,C,B,A
+}
+
+console.log(Grade.U)
