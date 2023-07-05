@@ -70,95 +70,94 @@
 
 // Type Aliases
 
-type stringOrNumber = string | number
+// type stringOrNumber = string | number
 
-type stringOrNumberArray = (string | number)[]
+// type stringOrNumberArray = (string | number)[]
 
-type Guitarist = {
-  name?: string,
-  active?: boolean,
-  albums: (string | number)[]
-}
-
-type userId = stringOrNumber
-
-// Literal Types
-let myName: "Dave"
-
-let userName: "Dave" | "Amy" | "John"
-
-const add = (a: number, b: number): number => {
-  return a + b
-}
-
-const logMsg = (message: any): void => {
-  console.log(message);
-}
-
-logMsg("Hello!")
-logMsg(add(2,3))
-
-let subtract = function(c: number, d: number): number {
-  return c - d
-}
-
-type mathFunction = (a: number, b: number) => number;
-// interface mathFunction { (a: number, b: number): number;
+// type Guitarist = {
+//   name?: string,
+//   active?: boolean,
+//   albums: (string | number)[]
 // }
 
-let multiply: mathFunction = function(c,d) {
-  return c * d;
-}
+// type userId = stringOrNumber
 
-logMsg(multiply(2,2))
+// // Literal Types
+// let myName: "Dave"
 
-// optional parameters
-// optional parameter must be last.
-const addAll = (a: number, b: number, c?: number): number => {
-  if (typeof c !== "undefined") {
-    return a + b + c
-  }
-  return a + b
-}
+// let userName: "Dave" | "Amy" | "John"
 
-//10
-const sumAll = (a: number = 10, b: number, c: number = 2): number => { 
-    return a + b + c
-}
+// const add = (a: number, b: number): number => {
+//   return a + b
+// }
 
-logMsg(addAll(2,3,2))
-logMsg(addAll(2,3))
-logMsg(sumAll(2,3))
-logMsg(sumAll(undefined,3))
+// const logMsg = (message: any): void => {
+//   console.log(message);
+// }
 
-// Rest Parameters
-const total = (...nums: number[]): number => {
-  return nums.reduce((prev, curr) => prev + curr)
-}
+// logMsg("Hello!")
+// logMsg(add(2,3))
 
-logMsg(total(1,2,3,4))
+// let subtract = function(c: number, d: number): number {
+//   return c - d
+// }
 
-const createError = (errorMsg: string): never => {
-  throw new Error (errorMsg)
-}
+// type mathFunction = (a: number, b: number) => number;
+// // interface mathFunction { (a: number, b: number): number;
+// // }
 
-const infinite = () => {
-  let i: number = 1;
-  while (true) {
-    i++
-    if(i > 100) break
-  }
-}
+// let multiply: mathFunction = function(c,d) {
+//   return c * d;
+// }
 
-// custom typeguard
-const isNumber = (value: any): boolean => {
-  return typeof value === "number" ? true : false
-}
+// logMsg(multiply(2,2))
 
-// use of the never type
-const numberOrString = (value: number | string): string => {
-  if (typeof value === "number") return "number"
-  if (typeof value === "string") return "string"
-  return createError("This should never happen!")
-}
+// // optional parameters
+// // optional parameter must be last.
+// const addAll = (a: number, b: number, c?: number): number => {
+//   if (typeof c !== "undefined") {
+//     return a + b + c
+//   }
+//   return a + b
+// }
 
+// //10
+// const sumAll = (a: number = 10, b: number, c: number = 2): number => { 
+//     return a + b + c
+// }
+
+// logMsg(addAll(2,3,2))
+// logMsg(addAll(2,3))
+// logMsg(sumAll(2,3))
+// logMsg(sumAll(undefined,3))
+
+// // Rest Parameters
+// const total = (...nums: number[]): number => {
+//   return nums.reduce((prev, curr) => prev + curr)
+// }
+
+// logMsg(total(1,2,3,4))
+
+// const createError = (errorMsg: string): never => {
+//   throw new Error (errorMsg)
+// }
+
+// const infinite = () => {
+//   let i: number = 1;
+//   while (true) {
+//     i++
+//     if(i > 100) break
+//   }
+// }
+
+// // custom typeguard
+// const isNumber = (value: any): boolean => {
+//   return typeof value === "number" ? true : false
+// }
+
+// // use of the never type
+// const numberOrString = (value: number | string): string => {
+//   if (typeof value === "number") return "number"
+//   if (typeof value === "string") return "string"
+//   return createError("This should never happen!")
+// }
