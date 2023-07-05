@@ -120,10 +120,19 @@ const addAll = (a: number, b: number, c?: number): number => {
   }
   return a + b
 }
-const sumAll = (a: number, b: number, c: number = 2): number => { 
+
+//10
+const sumAll = (a: number = 10, b: number, c: number = 2): number => { 
     return a + b + c
 }
 
 logMsg(addAll(2,3,2))
 logMsg(addAll(2,3))
-logMsg(sumAll(2,3))
+logMsg(sumAll(undefined,3))
+
+// Rest Parameters
+const total = (...nums: number[]): number => {
+  return nums.reduce((prev, curr) => prev + curr)
+}
+
+logMsg(total(1,2,3,4))

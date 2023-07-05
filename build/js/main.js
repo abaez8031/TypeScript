@@ -29,9 +29,15 @@ const addAll = (a, b, c) => {
     }
     return a + b;
 };
-const sumAll = (a, b, c = 2) => {
+//10
+const sumAll = (a = 10, b, c = 2) => {
     return a + b + c;
 };
 logMsg(addAll(2, 3, 2));
 logMsg(addAll(2, 3));
-logMsg(sumAll(2, 3));
+logMsg(sumAll(undefined, 3));
+// Rest Parameters
+const total = (...nums) => {
+    return nums.reduce((prev, curr) => prev + curr);
+};
+logMsg(total(1, 2, 3, 4));
