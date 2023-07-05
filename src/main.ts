@@ -81,3 +81,19 @@ type Guitarist = {
 }
 
 type userId = stringOrNumber
+
+// Literal Types
+let myName: "Dave"
+
+let userName: "Dave" | "Amy" | "John"
+
+const add = (a: number, b: number): number => {
+  return a + b
+}
+
+const logMsg = (message: any): void => {
+  console.log(message);
+}
+
+logMsg("Hello!")
+logMsg(add(2,3))
