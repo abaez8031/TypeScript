@@ -1,67 +1,16 @@
 "use strict";
 //
 // let stringArr = ["one", "hey", "Dave"];
-// Literal Types
-let myName;
-let userName;
-const add = (a, b) => {
-    return a + b;
+let a = "hello";
+let b = a;
+let c = a;
+let d = "world";
+let e = "world";
+const addOrConcat = (a, b, c) => {
+    if (c === "add")
+        return a + b;
+    return "" + a + b;
 };
-const logMsg = (message) => {
-    console.log(message);
-};
-logMsg("Hello!");
-logMsg(add(2, 3));
-let subtract = function (c, d) {
-    return c - d;
-};
-// interface mathFunction { (a: number, b: number): number;
-// }
-let multiply = function (c, d) {
-    return c * d;
-};
-logMsg(multiply(2, 2));
-// optional parameters
-// optional parameter must be last.
-const addAll = (a, b, c) => {
-    if (typeof c !== "undefined") {
-        return a + b + c;
-    }
-    return a + b;
-};
-//10
-const sumAll = (a = 10, b, c = 2) => {
-    return a + b + c;
-};
-logMsg(addAll(2, 3, 2));
-logMsg(addAll(2, 3));
-logMsg(sumAll(2, 3));
-logMsg(sumAll(undefined, 3));
-// Rest Parameters
-const total = (...nums) => {
-    return nums.reduce((prev, curr) => prev + curr);
-};
-logMsg(total(1, 2, 3, 4));
-const createError = (errorMsg) => {
-    throw new Error(errorMsg);
-};
-const infinite = () => {
-    let i = 1;
-    while (true) {
-        i++;
-        if (i > 100)
-            break;
-    }
-};
-// custom typeguard
-const isNumber = (value) => {
-    return typeof value === "number" ? true : false;
-};
-// use of the never type
-const numberOrString = (value) => {
-    if (typeof value === "number")
-        return "number";
-    if (typeof value === "string")
-        return "string";
-    return createError("This should never happen!");
-};
+let myVal = addOrConcat(2, 2, "concat");
+// TS SEES NO ISSUE
+let nextVal = addOrConcat(2, 2, "concat");
