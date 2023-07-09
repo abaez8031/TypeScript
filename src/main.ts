@@ -180,4 +180,4 @@ const addOrConcat = (a: number, b: number, c: "add" | "concat"): number | string
 
 let myVal: string = addOrConcat(2,2,"concat") as string
 // TS SEES NO ISSUE
-// let nextVal: number = addOrConcat(2,2,"concat") as number
+let nextVal: number = addOrConcat(2,2,"concat") as number
