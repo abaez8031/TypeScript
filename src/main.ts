@@ -183,12 +183,11 @@
 // let nextVal: number = addOrConcat(2,2,"concat") as number
 
 class Coder {
-  name: string
-  music: string
-  age: number
-  lang: string
-
-  constructor(name:string, music: string, age: number, lang: string) {
+  constructor(
+    public readonly name: string, 
+    public music: string, 
+    private age: number, 
+    protected lang: string) {
     this.name = name
     this.music = music
     this.age = age
