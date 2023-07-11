@@ -181,3 +181,17 @@
 // let myVal: string = addOrConcat(2,2,"concat") as string
 // // TS SEES NO ISSUE
 // let nextVal: number = addOrConcat(2,2,"concat") as number
+
+class Coder {
+  name: string
+  music: string
+  age: number
+  lang: string
+
+  constructor(name:string, music: string, age: number, lang: string) {
+    this.name = name
+    this.music = music
+    this.age = age
+    this.lang = lang
+  }
+}
