@@ -162,22 +162,22 @@
 //   return createError("This should never happen!")
 // }
 
-type One = string;
-type Two = string | number;
-type Three = "hello"
+// type One = string;
+// type Two = string | number;
+// type Three = "hello"
 
-let a: One = "hello";
-let b = a as Two;
-let c = a as Three
+// let a: One = "hello";
+// let b = a as Two;
+// let c = a as Three
 
-let d = <One>"world"
-let e = <string | number>"world"
+// let d = <One>"world"
+// let e = <string | number>"world"
 
-const addOrConcat = (a: number, b: number, c: "add" | "concat"): number | string => {
-  if(c === "add") return a + b
-  return "" + a + b
-}
+// const addOrConcat = (a: number, b: number, c: "add" | "concat"): number | string => {
+//   if(c === "add") return a + b
+//   return "" + a + b
+// }
 
-let myVal: string = addOrConcat(2,2,"concat") as string
-// TS SEES NO ISSUE
-let nextVal: number = addOrConcat(2,2,"concat") as number
+// let myVal: string = addOrConcat(2,2,"concat") as string
+// // TS SEES NO ISSUE
+// let nextVal: number = addOrConcat(2,2,"concat") as number
