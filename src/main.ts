@@ -252,5 +252,10 @@ class Peeps {
   static getCount(): number {
     return Peeps.count
   }
-  
+
+  public id: number
+  constructor(public name: string) {
+    this.name = name;
+    this.id = ++Peeps.count
+  }
 }
