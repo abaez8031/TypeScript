@@ -288,4 +288,5 @@ class Bands {
 
 const myBands = new Bands();
 myBands.data = (["Neil Young", "Led Zep"])
+myBands.data = ([...myBands.data, "ZZ Top"])
 console.log(myBands.data)
