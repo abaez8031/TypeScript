@@ -259,3 +259,9 @@ class Peeps {
     this.id = ++Peeps.count
   }
 }
+
+const John = new Peeps("John")
+const Steve = new Peeps("Steve")
+const Amy = new Peeps("Amy")
+
+console.log(Peeps.count)
