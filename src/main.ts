@@ -285,3 +285,7 @@ class Bands {
     else throw new Error("Param is not an array of strings")
   }
 }
+
+const myBands = new Bands();
+myBands.data = (["Neil Young", "Led Zep"])
+console.log(myBands.data)

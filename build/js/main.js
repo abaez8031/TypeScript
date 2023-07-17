@@ -193,3 +193,22 @@ const John = new Peeps("John");
 const Steve = new Peeps("Steve");
 const Amy = new Peeps("Amy");
 console.log(Peeps.count);
+class Bands {
+    constructor() {
+        this.dataState = [];
+    }
+    get data() {
+        return this.dataState;
+    }
+    set data(value) {
+        if (Array.isArray(value) && value.every(ele => typeof (ele) === "string")) {
+            this.dataState = value;
+            return;
+        }
+        else
+            throw new Error("Param is not an array of strings");
+    }
+}
+const myBands = new Bands();
+myBands.data = (["Neil Young", "Led Zep"]);
+console.log(myBands.data);
