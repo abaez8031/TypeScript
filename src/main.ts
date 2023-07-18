@@ -291,10 +291,14 @@
 // myBands.data = ([...myBands.data, "ZZ Top"])
 // console.log(myBands.data)
 
+// interface TransactionObj {
+//   Pizza: number,
+//   Books: number,
+//   Job: number
+// }
+
 interface TransactionObj {
-  Pizza: number,
-  Books: number,
-  Job: number
+  [index: string]: number
 }
 
 const todaysTransactions: TransactionObj = {
@@ -304,3 +308,18 @@ const todaysTransactions: TransactionObj = {
 }
 
 console.log(todaysTransactions.Pizza)
+console.log(todaysTransactions["Pizza"])
+
+let prop: string = "Pizza"
+
+console.log(todaysTransactions[prop])
+
+const todaysNet = (transactions: TransactionObj): number => {
+  let total = 0;
+  for(const transaction in transactions) {
+    total += transactions[transaction];
+  }
+  return total
+}
+
+console.log(todaysNet(todaysTransactions))
