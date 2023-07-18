@@ -17,3 +17,8 @@ const todaysNet = (transactions) => {
     return total;
 };
 console.log(todaysNet(todaysTransactions));
+const student = {
+    name: "Doug",
+    GPA: 3.5,
+    classes: [100, 200]
+};
